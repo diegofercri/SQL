@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX CanalDescripcion on CANAL(Descripcion);
