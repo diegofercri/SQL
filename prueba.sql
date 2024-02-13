@@ -1,0 +1,1 @@
+select * from user_constraints where table_name='EMPLEADO';
