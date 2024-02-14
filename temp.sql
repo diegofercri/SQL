@@ -1,1 +1,1 @@
-select * from user_constraints where table_name='EMPLEADO';
+INSERT INTO COMPANIA VALUES (2,'Manolito');
