@@ -5,13 +5,43 @@
  * siguiente manera:
 */
 
--- CON SUBCONSULTA
+-- CON SUBCONSULTA Y ANY
 SELECT
     NOMBRE
 FROM
     EMPLEADO
 WHERE
     ALOJAMIENTO= ANY(
+        SELECT
+            ALOJAMIENTO_ID
+        FROM
+            ALOJAMIENTO
+        WHERE
+            ALOJAMIENTO IN( 'MULLERS', 'PAPA KING' )
+    );
+
+-- CON SUBCONSULTA Y SOME
+SELECT
+    NOMBRE
+FROM
+    EMPLEADO
+WHERE
+    ALOJAMIENTO= SOME(
+        SELECT
+            ALOJAMIENTO_ID
+        FROM
+            ALOJAMIENTO
+        WHERE
+            ALOJAMIENTO IN( 'MULLERS', 'PAPA KING' )
+    );
+
+-- CON SUBCONSULTA E IN
+SELECT
+    NOMBRE
+FROM
+    EMPLEADO
+WHERE
+    ALOJAMIENTO IN (
         SELECT
             ALOJAMIENTO_ID
         FROM
