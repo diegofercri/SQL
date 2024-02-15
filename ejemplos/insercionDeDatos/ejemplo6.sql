@@ -4,4 +4,8 @@
  * nuevo valor de clave primaria para la columna cod_act.
 */
 
-INSERT INTO ACTOMEDICO VALUES (SEQ_ID_ActoMedico.NEXTVAL,'Acto Medico 3',10500);
+INSERT INTO ACTOMEDICO VALUES (
+    SEQ_ID_ACTOMEDICO.NEXTVAL,
+    'Acto Medico 3',
+    10500
+);

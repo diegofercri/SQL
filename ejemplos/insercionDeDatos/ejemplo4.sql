@@ -6,4 +6,13 @@
  * orden:
 */
 
-INSERT INTO TARIFA (ID_ActoMedico, ID_Compania) SELECT ID_ActoMedico,ID_Compania FROM ACTOMEDICO,COMPANIA;
+INSERT INTO TARIFA (
+    ID_ACTOMEDICO,
+    ID_COMPANIA
+)
+    SELECT
+        ID_ACTOMEDICO,
+        ID_COMPANIA
+    FROM
+        ACTOMEDICO,
+        COMPANIA;

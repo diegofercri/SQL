@@ -1,7 +1,8 @@
-drop table CLIENTE cascade constraints;
-create table CLIENTE (
-    ID_Cliente number(10) constraint PK_Cliente primary key,
-    DNI varchar2(9) constraint UQ_DNI_Cliente unique,
-    Nombre varchar2(50),
-    FechaAlta date default sysdate
+DROP TABLE CLIENTE CASCADE CONSTRAINTS;
+
+CREATE TABLE CLIENTE (
+    ID_CLIENTE NUMBER(10) CONSTRAINT PK_CLIENTE PRIMARY KEY,
+    DNI VARCHAR2(9) CONSTRAINT UQ_DNI_CLIENTE UNIQUE,
+    NOMBRE VARCHAR2(50),
+    FECHAALTA DATE DEFAULT SYSDATE
 );

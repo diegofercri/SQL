@@ -4,4 +4,8 @@
  * La orden sería la siguiente:
 */
 
-INSERT INTO TARIFA VALUES (1,1,6000);
+INSERT INTO TARIFA VALUES (
+    1,
+    1,
+    6000
+);

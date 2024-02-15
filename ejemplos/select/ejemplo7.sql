@@ -1,6 +1,8 @@
 -- Obtener los nombres de los empleados cuyo nombre empieza por ‘WIL’
 
-SELECT nombre
-FROM empleado
-WHERE nombre
-    LIKE 'WIL%';
+SELECT
+    NOMBRE
+FROM
+    EMPLEADO
+WHERE
+    NOMBRE LIKE 'WIL%';

@@ -3,26 +3,28 @@
  * y una afición puede ser compartida por varias personas.
 */
 
-drop table PERSONA cascade constraint;
-drop table AFICION cascade constraint;
-drop table PERSONA_AFICION cascade constraint;
+DROP TABLE PERSONA CASCADE CONSTRAINT;
 
-create table PERSONA (
-    ID_Persona number(4),
-    Nombre varchar2(50),
-    constraint PK_Persona primary key (ID_Persona)
+DROP TABLE AFICION CASCADE CONSTRAINT;
+
+DROP TABLE PERSONA_AFICION CASCADE CONSTRAINT;
+
+CREATE TABLE PERSONA (
+    ID_PERSONA NUMBER(4),
+    NOMBRE VARCHAR2(50),
+    CONSTRAINT PK_PERSONA PRIMARY KEY (ID_PERSONA)
 );
 
-create table AFICION (
-    ID_Aficion number(4),
-    Descripcion varchar2(50),
-    constraint PK_Aficion primary key (ID_Aficion)
+CREATE TABLE AFICION (
+    ID_AFICION NUMBER(4),
+    DESCRIPCION VARCHAR2(50),
+    CONSTRAINT PK_AFICION PRIMARY KEY (ID_AFICION)
 );
 
-create table PERSONA_AFICION (
-    ID_Persona number(4),
-    ID_Aficion number(4),
-    constraint PK_Persona_Aficion primary key (ID_Persona, ID_Aficion),
-    constraint FK_Persona foreign key (ID_Persona) references PERSONA(ID_Persona), 
-    constraint FK_Aficion foreign key (ID_Aficion) references AFICION(ID_Aficion)
+CREATE TABLE PERSONA_AFICION (
+    ID_PERSONA NUMBER(4),
+    ID_AFICION NUMBER(4),
+    CONSTRAINT PK_PERSONA_AFICION PRIMARY KEY (ID_PERSONA, ID_AFICION),
+    CONSTRAINT FK_PERSONA FOREIGN KEY (ID_PERSONA) REFERENCES PERSONA(ID_PERSONA),
+    CONSTRAINT FK_AFICION FOREIGN KEY (ID_AFICION) REFERENCES AFICION(ID_AFICION)
 );
