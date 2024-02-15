@@ -5,6 +5,7 @@
  * siguiente manera:
 */
 
+-- CON SUBCONSULTA
 SELECT
     NOMBRE
 FROM
@@ -20,7 +21,6 @@ WHERE
     );
 
 -- CON JOIN
-
 SELECT
     NOMBRE
 FROM
@@ -31,7 +31,6 @@ WHERE
     ALOJAMIENTO.ALOJAMIENTO IN ('MULLERS', 'PAPA KING');
 
 -- CONSULTA NORMAL
-
 SELECT
     NOMBRE
 FROM
