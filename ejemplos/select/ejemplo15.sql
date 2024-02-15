@@ -1,0 +1,47 @@
+-- Obtener el nombre de los empleados cuyo oficio es ‘LEÑADOR’.
+
+-- CON WHERE
+SELECT
+    NOMBRE
+FROM
+    EMPLEADO,
+    OFICIO,
+    OFICIOEMPLEADO
+WHERE
+    EMPLEADO_ID=OFICIOEMPLEADO.EMPLEADO
+    AND OFICIO_ID=OFICIOEMPLEADO.OFICIO
+    AND OFICIO.OFICIO='LEÑADOR';
+
+-- CON JOIN
+SELECT
+    NOMBRE
+FROM
+    EMPLEADO
+    JOIN OFICIOEMPLEADO
+    ON EMPLEADO_ID=OFICIOEMPLEADO.EMPLEADO
+    JOIN OFICIO
+    ON OFICIO_ID=OFICIOEMPLEADO.OFICIO
+WHERE
+    OFICIO.OFICIO='LEÑADOR';
+
+-- CON SUBCONSULTA
+SELECT
+    NOMBRE
+FROM
+    EMPLEADO
+WHERE
+    EMPLEADO_ID=(
+        SELECT
+            EMPLEADO
+        FROM
+            OFICIOEMPLEADO
+        WHERE
+            OFICIO=(
+                SELECT
+                    OFICIO_ID
+                FROM
+                    OFICIO
+                WHERE
+                    OFICIO='LEÑADOR'
+            )
+    );
