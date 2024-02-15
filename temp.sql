@@ -1,1 +1,0 @@
-INSERT INTO COMPANIA VALUES (2,'Manolito');
