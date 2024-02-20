@@ -1,12 +1,12 @@
 /*
  * Obten una lista ordenada del nombre del oficio junto con la media de edad de los empleados
- * que ejercen ese oficio ordenada por valor ascendente de edad. solo se debe considerar
- * los empleados para los que hemos grabbado una edad.
+ * que ejercen ese oficio ordenada por valor ascendente de edad. Solo se debe considerar
+ * los empleados para los que hemos grabado una edad.
 */
 
 SELECT
     O.OFICIO,
-    AVG(E.EDAD) AS "EDAD MEDIA"
+    AVG(E.EDAD) "EDAD MEDIA"
 FROM
     OFICIO O
     JOIN OFICIOEMPLEADO OE
