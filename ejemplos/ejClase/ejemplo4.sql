@@ -1,6 +1,6 @@
 -- Nombres de empleados y numero de su oficio, incluyendo los empleado que no tienen oficio
 
--- CON LEFT JOIN
+-- CON LEFT JOIN (no se si esta bien, probablemente si)
 SELECT
     E.NOMBRE,
     OE.OFICIO
@@ -11,7 +11,7 @@ FROM
 ORDER BY
     2;
 
--- CON UNION
+-- CON UNION (creo que no esta bien)
 SELECT
     E.NOMBRE,
     0 AS OFICIO
