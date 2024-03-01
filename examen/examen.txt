@@ -1,0 +1,13 @@
+1. Una unica tabla por select. Nº de oficio y Nº de empleado de aquelloss
+   oficios que tengan algun empleado con edad > 40.
+
+2. Usando los datos del ej1 mostrar Nº de oficio y cantidad de empleados de ese oficio.
+
+3. Usando los datos del ej2 mostrar Nº de oficio con maxima cantidad de empleados.
+   Solo se debe mostrar Nº de oficio, puede haber más de uno.
+
+4. Muestra el nombre del oficio de todos los oficios (sin repetir) y cuantos empleados lo ejercen.
+   En oficios sin empleados mostrar 0.
+
+5. Mostrar el arbol resultante de la consulta jerarquica cobre trabajador con raiz 'KING',
+   no incluir trabajadores/jefes cuyo nombre contenga 'n' o 'm' en su tercer caracter.
