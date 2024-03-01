@@ -11,3 +11,5 @@
 
 5. Mostrar el arbol resultante de la consulta jerarquica cobre trabajador con raiz 'KING',
    no incluir trabajadores/jefes cuyo nombre contenga 'n' o 'm' en su tercer caracter.
+
+   profesorjulioerd
