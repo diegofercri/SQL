@@ -3,17 +3,14 @@
     no incluir trabajadores/jefes cuyo nombre contenga 'n' o 'm' en su tercer caracter.
 */
 
--- NO ESTA TERMINADO
-
 SELECT
     LPAD(' ', 2*(LEVEL-1))
     ||NOMBRE AS TRABAJADOR,
     COD_EMP,
     COD_JEFE
 FROM
-    TRABAJADOR START WITH NOMBRE='KING'
-CONNECT BY
-    PRIOR COD_EMP=COD_JEFE
--- ESTA PARTE NO FUNCIONA
+    TRABAJADOR
 WHERE
-    INSTR(NOMBRE, 'N', 3, 1)<>3;
+    SUBSTR(NOMBRE, 3, 1) NOT IN ('N', 'M') START WITH NOMBRE='KING'
+CONNECT BY
+    PRIOR COD_EMP=COD_JEFE;
