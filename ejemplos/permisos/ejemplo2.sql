@@ -1,0 +1,2 @@
+-- Ver permisos asignados
+SELECT PRIVILEGE FROM USER_SYS_PRIVS;
